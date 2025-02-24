@@ -10,6 +10,21 @@ import com.wizard.utils.Printer
 
 
 class ExampleWebApp: WizardApplication() {
+    companion object {
+        fun registerRoutes () {
+            get(
+                "/status",
+                object : Route {
+                    override fun handle(
+                        request: Request,
+                        response: Response
+                    ) {
+                        println("success")
+                        response.body = "Status page"
+                    }
+                })
+        }
+    }
 }
 
 fun main() {
@@ -23,6 +38,7 @@ fun main() {
 
     val app = ExampleWebApp()
     app.run()
+    ExampleWebApp.registerRoutes()
 
     get("/", object: Route {
         override fun handle(
@@ -30,16 +46,6 @@ fun main() {
             response: Response
         ): String {
             return "Home page"
-        }
-    })
-
-    get("/status", object: Route {
-        override fun handle(
-            request: Request,
-            response: Response
-        ): Unit? {
-            println("success")
-            return null
         }
     })
 

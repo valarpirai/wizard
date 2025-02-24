@@ -29,7 +29,8 @@ class RouteHandler: AbstractHandler() {
 
             response.status = res.status
             handlerResponse?.let {
-                response.writer?.println(handlerResponse.toString())
+                if (handlerResponse !is Unit)
+                    response.writer?.println(handlerResponse.toString())
             }
             res.body?.let {
                 response.writer?.println(res.body.toString())
