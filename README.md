@@ -31,3 +31,5 @@ and both a build cache and a configuration cache (see `gradle.properties`).
   - Interceptor
 - Use it to build a web application
 
+## Example WebApp
+`app/` directory contains example web app using Wizard core
