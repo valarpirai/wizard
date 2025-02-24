@@ -3,15 +3,8 @@ package com.wizard
 open class WizardApplication {
 
     companion object {
-        private var instance: WizardService? = null
-
         private fun instance(): WizardService {
-            instance?.let {
-                return instance as WizardService
-            }
-
-            instance = WizardService.getInstance()
-            return instance as WizardService
+            return WizardService.getInstance()
         }
 
         fun get(path: String, handler: Route) {

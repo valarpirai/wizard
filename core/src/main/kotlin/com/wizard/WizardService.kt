@@ -9,8 +9,11 @@ class WizardService private constructor() {
     private var routeHandler = RouteHandler()
 
     companion object {
+        private var instance: WizardService? = null
+
         fun getInstance(): WizardService {
-            return WizardService()
+            instance = instance ?: WizardService()
+            return instance as WizardService
         }
     }
 
