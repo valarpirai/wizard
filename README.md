@@ -81,6 +81,27 @@ The project uses modern Gradle features:
 - Kotlin 2.1.0 with Java 11 toolchain
 - JUnit Jupiter for testing
 
+## Documentation
+
+Comprehensive documentation is available in the `docs/` directory:
+
+- **[Product Requirements Document (PRD)](docs/PRD.md)** - Complete feature specifications and technical requirements
+- **[Code Samples](docs/CODE_SAMPLES.md)** - Practical examples covering:
+  - Quick Start & HTTP Routing
+  - Request & Response Handling
+  - Interceptors (middleware)
+  - Database Operations
+  - Complete Application Examples
+- **[Comparison with Dropwizard](docs/COMPARISON_WITH_DROPWIZARD.md)** - Feature-by-feature comparison with Dropwizard framework
+
+### Quick Links
+
+- [Getting Started Guide](docs/CODE_SAMPLES.md#1-quick-start)
+- [HTTP Methods & Routing](docs/CODE_SAMPLES.md#2-http-routing)
+- [Custom Interceptors](docs/CODE_SAMPLES.md#5-interceptors)
+- [Database Integration](docs/CODE_SAMPLES.md#6-database-operations)
+- [Complete Blog API Example](docs/CODE_SAMPLES.md#9-complete-blog-api-example)
+
 ## License
 
 MIT License - see LICENSE file for details.
